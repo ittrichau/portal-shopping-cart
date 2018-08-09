@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import portal.shopping.portalshoppingcart.entity.Cart;
@@ -13,8 +14,8 @@ import portal.shopping.portalshoppingcart.entity.Cart;
 @Repository
 public class CartService {
 	
-	/*@Autowired
-	private CartRepository cartRepo;*/
+	@Autowired
+	private CartRepository cartRepo;
 	@PersistenceContext
 	private EntityManager em;
 	
